@@ -1,0 +1,127 @@
+@import "retina.less";
+@import "images.less";
+@import "vli-font.less";
+
+// Define new styles here
+@vimGreen: #32A349;
+@vimPink:  #EC0C6E;
+@vimBlue:  #036287;
+
+// Paul Irish flexbox http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.shirts {
+  width: 90%;
+  margin: 10% auto;
+  position: relative;
+
+  nav {
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (min-width: 1000px) {
+      width: 25%;
+      position: absolute;
+      top: 0;
+      left: 37.5%;
+    }
+
+    h2 {
+
+      @media (min-width: 1000px) {
+        margin-top: 45%;
+      }
+
+      a {
+        background-color: @vimPink;
+        color: #fff;
+        padding: 0.2rem 1rem;
+
+        &:hover {
+          color: @vimPink;
+          background-color: transparent;
+        }
+      }
+    }
+
+    a {
+      display: inline-block;
+      font-size: 2rem;
+
+      @media (max-width: 999px) {
+        margin-top: 2rem;
+      }
+
+      @media (min-width: 1000px) {
+        font-size: 1.3rem;
+      }
+
+      @media (min-width: 1245px) {
+        font-size: 1.6rem;
+      }
+
+      text-decoration: none;
+      color: fade(#222, 30%);
+
+      strong {
+        display: inline-block;
+        background-color: @vimGreen;
+        color: #fff;
+        padding: 0.2rem 0.5rem;
+      }
+
+      &:hover {
+        color: @vimGreen;
+
+        strong {
+          background-color: transparent;
+          color: @vimGreen;
+        }
+      }
+    }
+  }
+
+  img {
+    @media (max-width: 999px) {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1000px) {
+      width: 37.5%;
+      height: auto;
+      position: absolute;
+      top: 0;
+    }
+
+    &:first-child {
+      left: 0;
+      max-width: 444px;
+      max-height: 546px;
+    }
+
+    &:last-child {
+      right: 0;
+      max-width: 455px;
+      max-height: 541px;
+
+      @media (max-width: 999px) {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+

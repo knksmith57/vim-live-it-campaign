@@ -1,0 +1,40 @@
+/* glue: 0.9.1 hash: ea84c7d09e */
+.sprite-images-front,.sprite-images-back{
+    background-image:url('/images/images.png');
+    background-repeat:no-repeat;
+}
+
+.sprite-images-front{
+    background-position:0 0;
+    width:444px;
+    height:546px;
+}
+
+.sprite-images-back{
+    background-position:-444px 0;
+    width:455px;
+    height:541px;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0),screen and (-o-min-device-pixel-ratio: 100/100),screen and (min-device-pixel-ratio: 1.0),screen and (min-resolution: 1.0dppx){
+    .sprite-images-front,
+    .sprite-images-back
+    {
+        background-image:url('/images/images.png');
+        -webkit-background-size: 899px 546px;
+        -moz-background-size: 899px 546px;
+        background-size: 899px 546px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2.0), screen and (min--moz-device-pixel-ratio: 2.0),screen and (-o-min-device-pixel-ratio: 200/100),screen and (min-device-pixel-ratio: 2.0),screen and (min-resolution: 2.0dppx){
+    .sprite-images-front,
+    .sprite-images-back
+    {
+        background-image:url('/images/images@2x.png');
+        -webkit-background-size: 899px 546px;
+        -moz-background-size: 899px 546px;
+        background-size: 899px 546px;
+    }
+}
