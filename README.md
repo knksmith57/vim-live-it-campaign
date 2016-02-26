@@ -8,10 +8,6 @@ This is a micro campaign splash page for swag based on [Tyler Cipriani](http://w
 
 Live at <http://vim.ksmith.io>
 
-![Site Medium](app/screenshots/medium.png)
-![Site Small](app/screenshots/small.png)
-
-
 ## Quickstart
 ```
 ## building / running locally
@@ -34,3 +30,7 @@ $ ssh -t dokku@dokku.me domains:add vim.ksmith.io vim.ksmith.io
 ## add git remote
 $ git remote add dokku dokku@dokku.me:vim.ksmith.io
 ```
+
+## le screenshot
+![Site Medium](app/screenshots/medium.png)
+![Site Small](app/screenshots/small.png)
