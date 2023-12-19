@@ -1,12 +1,8 @@
-FROM alpine:3.2
+FROM nginx:1-alpine
 
-RUN apk add --update nginx \
-      && rm -rf /var/cache/apk/*
+ENV NGINX_ENTRYPOINT_QUIET_LOGS=1
 
-ADD build/nginx.conf  /etc/nginx/nginx.conf
-ADD app/public        /usr/share/nginx/html
-ADD CHECKS            /app/CHECKS
+EXPOSE 3000
 
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+ADD nginx.conf  /etc/nginx/nginx.conf
+ADD app/public  /usr/share/nginx/html
